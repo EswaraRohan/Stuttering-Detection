@@ -27,7 +27,7 @@ Ensure you have the following installed:
 ### Steps to Run Locally
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/stuttering-detection.git](https://github.com/EswaraRohan/Stuttering-Detection.git
+   git clone https://github.com/your-repo/stuttering-detection.git
    cd stuttering-detection
    ```
 2. Build and run the backend:
