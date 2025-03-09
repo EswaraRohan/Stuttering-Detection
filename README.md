@@ -24,29 +24,50 @@ Ensure you have the following installed:
 - Node.js & npm/yarn
 - Python 3.x
 
-### Steps to Run Locally
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-repo/stuttering-detection.git
-   cd stuttering-detection
-   ```
-2. Build and run the backend:
-   ```sh
-   cd backend
-   pip install -r requirements.txt
-   uvicorn main:app --reload
-   ```
-3. Start the frontend:
-   ```sh
-   cd frontend
-   npm install
-   npm start
-   ```
-4. Run the project using Docker:
-   ```sh
-   docker-compose up --build
-   ```
+## Steps to Run Locally
 
+1. Clone the Repository
+```bash
+git clone https://github.com/EswaraRohan/stuttering-detection.git
+cd stuttering-detection
+```
+
+2. Setup and Run the Backend
+```
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+flask run
+
+cd fastapi
+source venv/bin/activate
+./start.sh
+```
+
+3. Start the Frontend
+```
+cd frontend
+npm install
+npm start
+```
+
+4. Run the Project Using Docker
+```
+docker-compose up --build
+To check running containers:
+sudo docker ps -a
+To start a specific container:
+sudo docker start <container_id>
+```
+
+5. Add Data (If Required)
+```
+Ensure script permissions:
+chmod +x add_data.sh
+Run the script:
+./add_data.sh
+```
 ## Deployment
 The project has been deployed on **AIISH’s** internal server using Docker. The deployment involves:
 - Setting up a **private IP** to comply with AIISH’s security policies.
